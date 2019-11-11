@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Buy";
+}
+    <div class="jumbotron">
+        <h2 id="center">Форма оформления покупки</h2>
+        <hr />
+        <h3><a href="~/Home/StorApp">Книжный Магазин</a></h3>
+        <h3><a href="~/Home/AddPerson">Добавить человека в БД</a></h3>
+    </div>
+<body>
+    <div>
+        
+        <hr />
+        <p>Название книги: @ViewBag.Name</p>
+        <p>Автор книги:    @ViewBag.Author</p>
+        <hr />
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+            <table cellpadding="10" width="20%">
+                <tr>
+                    <td><p>Введите свое имя </p></td>
+                    <td>
+                        @*<input type="text" name="Person" />*@
+                        <p>
+                            <input type="text" name="Person" list="People">
+                            <datalist type="text" id="People">
+                                @foreach (BookingAppStore.Models.Person b in Model)
+                                {
+                                    <option>@b.Name</option>
+                                }
+                            </datalist>
+                        </p>
+                    </td>
+                </tr>
+                @*<tr>
+                        <td><p>Введите адрес :</p></td>
+                        <td>
+                            <input type="text" name="Address" />
+                        </td>
+                    </tr>*@
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+

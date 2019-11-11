@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Меню сайта</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <h1></h1>
+        </div>
+    </div>
+    <div class="container body-content">
+        <style type="text/css">
+            .body-content {
+                background-image: url(https://inshaua.com/wp-content/uploads/2018/07/OHT4YX0.jpg);
+                background-color: #cae1dd;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            body { /*C:\Users\OKJI\source\repos\BookingAppStore\BookingAppStore\App_Data\Book.jpg*/
+                background-image: url(https://imgclf.112.ua/original/2015/05/15/162674.jpg);
+                background-color: #cf4545;
+                background-color: #c3c3c3;
+                background-repeat: repeat-y;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            .shadowtext {
+                text-shadow: 10px -10px 2px #c3c3c3, 10px -10px 10px #9bf3ff;
+            }
+
+            #center {
+                text-align: center;
+                color: #00585b;
+            }
+
+
+            #addBook {
+                color: #ba0a0a;
+                border: 5px double #808080;
+                background: -webkit-radial-gradient(30px 30px, cover, #9fff79, #fff200);
+                padding: 10px;
+                text-decoration: dotted;
+            }
+        </style>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <h1></h1>
+            </div>
+            <p>Подпись разработчика</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Покупки";
+}
+
+
+    <div class="jumbotron">
+        <h2 id="center">История покупок</h2>
+        <hr />
+        <h3><a href="~/Home/StorApp">Книжный Магазин</a></h3>
+    </div>
+<div>
+    <table cellpadding="10" width="100%">
+        <tr class="header" bgcolor="fdbdbd">
+            <td><p>ИД Покупки</p></td>
+            <td><p>Имя</p></td>
+            <td><p>Адрес</p></td>
+            <td><p>ИД книги</p></td>
+            <td><p>Дата покупкии</p></td>
+            <td></td>
+        </tr>
+        @{int i = 0; }
+        @foreach (BookingAppStore.Models.Purchase b in Model)
+        {
+            string ss = (i++ % 2 == 0) ? "dbe9b7" : "ebf2da";
+            <tr bgcolor=@ss>
+                <td><p>@b.PurchaseId</p></td>
+                <td><p>@b.Person</p></td>
+                <td><p>@b.Address</p></td>
+                <td><p>@b.BookId</p></td>
+                <td><p>@b.Date</p></td>
+            </tr>
+        }
+    </table>
+</div>

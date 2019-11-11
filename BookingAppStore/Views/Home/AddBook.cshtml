@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "AddBook";
+}
+
+    <div class="jumbotron">
+        <h2 id="center">Форма добавления книги</h2>
+        <hr />
+        <h3><a href="~/Home/StorApp">Книжный Магазин</a></h3>
+    </div>
+<body>
+    <div>
+        <form method="post" action="">
+            <table cellpadding="10" width="30%">
+                <tr>
+                    <td><p>Введите название книги:</p></td>
+                    <td>
+                        <input type="text" name="Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите автора книги:</p></td>
+                    <td>
+                        <input type="text" name="Author"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите цену книги:</p></td>
+                    <td>
+                        <input type="text" name="Price"/>
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Добавить книгу в магазин" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+

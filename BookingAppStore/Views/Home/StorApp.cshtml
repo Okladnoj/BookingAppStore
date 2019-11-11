@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<BookingAppStore.Models.Book>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <h1 id="center" class="shadowtext"><b>Книжный Магазин "БамBOOK"</b></h1>
+    <hr />
+    <h3><a href="~/Home/PayStor">История покупок</a></h3>
+    <h3><a href="~/Home/PersonList">Список зарегестрированных людей</a></h3>
+</div>
+<div>
+    <table cellpadding="10" width="100%">
+        <tr class="header" bgcolor="fdbdbd">
+            @*"fdbdbd"*@
+            <td><p>Название книги</p></td>
+            <td><p>Автор</p></td>
+            <td><p>Цена</p></td>
+            <td></td>
+        </tr>
+        @{int i = 0; }
+        @foreach (BookingAppStore.Models.Book b in Model)
+        {
+            string ss = (i++ % 2 == 0) ? "dbe9b7" : "ebf2da";
+            <tr bgcolor=@ss>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Author</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купить книгу</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
+<table cellpadding="10" @*width="50%"*@ align="center">
+    <tr>
+        <td align="center">            
+            <h3 id="addBook"><a href="~/Home/AddBook"> Добавить новую книгу в магазин</a></h3>
+        </td>
+    </tr>
+</table>
